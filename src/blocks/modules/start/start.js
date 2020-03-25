@@ -1,13 +1,15 @@
-modules.define('start', ['i-bem-dom'], function(provide, bemDom) {
+import Swiper from "swiper";
+import $ from "jquery";
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
+$(document).ready(function() {
+    var swiper = new Swiper('.start__slider-content', {
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 });
