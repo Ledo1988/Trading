@@ -17,7 +17,7 @@
     cursor: pointer;
 
     &:hover, &:focus {
-        background-image: linear-gradient( 0deg, rgb(133,67,153) 100%, rgb(155,68,153) 48%, rgb(177,69,153) 0%);
+        background-image: linear-gradient( 0deg, rgb(177,69,153) 0%, rgb(155,68,153) 48%, rgb(133,67,153) 100%);
     }
 
     &[disabled] {

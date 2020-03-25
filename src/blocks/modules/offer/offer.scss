@@ -1,9 +1,11 @@
 .offer {
     @include container-fluid;
     margin-bottom: 70px;
+    padding-bottom: 120px;
 
     @media (max-width: $hd) {
         margin-bottom: 40px;
+        padding-bottom: 80px;
     }
 
     &__text {
@@ -20,17 +22,51 @@
     }
 
     &__desc {
-        margin-bottom: 100px;
+        margin-bottom: 115px;
 
         @media (max-width: $hd) {
-            margin-bottom: 50px;
+            margin-bottom: 65px;
         }
     }
 
     &__img {
-        flex-grow: 1;
-        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 55%;
+        height: 100%;
         text-align: center;
+
+        &:after {
+            @include  bgImg("/img/ico/ico_offer-bottom-after.png");
+            content: "";
+            position: absolute;
+            right: -100px;
+            bottom: -70px;
+            width: 100%;
+            height: 29px;
+        }
+    }
+
+    &__img--wrapper {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+
+        &:after {
+            @include  bgImg("/img/img/img_offer-cow.png");
+            content: "";
+            position: absolute;
+            top: 40%;
+            right: 6%;
+            width: 100%;
+            height: 80%;
+            background-position: right;
+        }
     }
 
 
@@ -38,6 +74,35 @@
         @include container;
         display: flex;
         justify-content: space-between;
+        position: relative;
         height: 100%;
+
+
+        &:before {
+            @include  bgImg("/img/ico/ico_offer-top-before.png");
+            content: "";
+            position: absolute;
+            top: 0;
+            right: calc(100% + 98px);
+            width: 402px;
+            height: 158px;
+
+            @media (max-width: $hd) {
+                right: calc(100% + 10px);
+                width: 250px;
+                height: 100px;
+            }
+        }
+
+        &:after {
+            @include  bgImg("/img/ico/ico_offer-top-before.png");
+            content: "";
+            position: absolute;
+            top: 125px;
+            left: 100%;
+            width: 191px;
+            height: 71px;
+            background-position: top left;
+        }
     }
 }
