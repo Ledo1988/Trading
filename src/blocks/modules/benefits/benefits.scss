@@ -1,12 +1,17 @@
 .benefits {
     @include container-fluid;
+    margin-bottom: 360px;
+
+    @media (max-width: $hd) {
+        margin-bottom: 200px;
+    }
 
     &__title {
         text-align: center;
-        margin-bottom: 165px;
+        margin-bottom: 100px;
 
         @media (max-width: $hd) {
-            margin-bottom: 100px;
+            margin-bottom: 60px;
         }
     }
 
@@ -14,15 +19,66 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        position: relative;
         margin: 0 $grid-unit*-4;
+
+        &:after {
+            @include  bgImg("/img/ico/ico_offer-top-before.png");
+            content: "";
+            position: absolute;
+            top: 0;
+            left: calc(100% + 98px);
+            width: 402px;
+            height: 158px;
+
+            @media (max-width: $hd) {
+                left: calc(100% + 10px);
+                width: 250px;
+                height: 100px;
+            }
+        }
+
+        &:before {
+            @include  bgImg("/img/ico/ico_offer-top-before.png");
+            content: "";
+            position: absolute;
+            right: calc(100% + 150px);
+            bottom: 125px;
+            width: 191px;
+            height: 71px;
+            background-position: bottom right;
+
+            @media (max-width: $hd) {
+                right: calc(100% + 10px);
+            }
+        }
     }
 
     &__list-item {
-        width: calc((100% - 16px*4)/3);
+        flex-basis: 26%;
+        margin: 80px auto;
         padding: 0 $grid-unit*4;
+        text-align: center;
+
+        @media (max-width: $hd) {
+            margin: 50px auto;
+        }
+
+        &:nth-of-type(3n - 1) {
+            flex-grow: 1;
+
+            &:last-of-type {
+                flex-grow: 0;
+            }
+        }
+    }
+
+    &__list-item-img {
+        margin-bottom: 30px;
     }
 
     &__list-item--wrapper {
+        display: inline-block;
         max-width: 330px;
         text-align: center;
     }
@@ -42,7 +98,7 @@
             content: "";
             position: absolute;
             top: 0;
-            left: calc(var(--width)/-2);
+            left: calc(var(--width)/-4);
             width: var(--width);
             height: 618px;
 
@@ -58,7 +114,7 @@
             content: "";
             position: absolute;
             top: 100%;
-            left: calc(var(--width)/-2);
+            left: calc(var(--width)/-4);
             width: var(--width);
             height: 25px;
 
