@@ -1,0 +1,41 @@
+$path: '/fonts/';
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 400;
+  src: url($path + 'OpenSans-Regular.woff2') format("woff2"),
+       url($path + 'OpenSans-Regular.woff') format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 600;
+  src: url($path + 'OpenSans-SemiBold.woff2') format("woff2"),
+  url($path + 'OpenSans-SemiBold.woff') format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 700;
+  src: url($path + 'OpenSans-Bold.woff2') format("woff2"),
+  url($path + 'OpenSans-Bold.woff') format("woff");
+}
+
+@font-face {
+  font-family: "GothamPro";
+  font-style: normal;
+  font-weight: 300;
+  src: url($path + 'GothamPro-Light.woff2') format("woff2"),
+       url($path + 'GothamPro-Light.woff') format("woff");
+}
+
+@font-face {
+  font-family: "GothamPro";
+  font-style: normal;
+  font-weight: 700;
+  src: url($path + 'GothamPro-Bold.woff2') format("woff2"),
+  url($path + 'GothamPro-Bold.woff') format("woff");
+}
