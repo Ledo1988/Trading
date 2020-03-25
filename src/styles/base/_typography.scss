@@ -1,21 +1,14 @@
 h1, .h1 {
     font-family: $font-secondary;
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 82px;
+    font-weight: 300;
+    line-height: 115%;
     margin-bottom: $grid-unit*8;
     margin-top: 0;
+    text-transform: uppercase;
 
-    @media (min-width: $md) {
-        font-size: 36px;
-    }
-
-    @media (min-width: $l) {
-        margin-bottom: 25px;
-        font-size: 40px;
-    }
-
-    @media (min-width: $xl) {
-        font-size: 48px;
+    @media (max-width: $hd) {
+        font-size: 68px;
     }
 }
 
@@ -26,7 +19,6 @@ ul {
 }
 
 p {
-    font-size: 14px;
     margin: 0;
     margin-bottom: $grid-unit;
 
@@ -39,4 +31,8 @@ a {
     color: $color-primary;
     text-decoration: none;
     transition: $transition;
+}
+
+.strong {
+    font-weight: 700;
 }

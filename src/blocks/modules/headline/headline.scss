@@ -1,0 +1,116 @@
+.headline {
+    @include container-fluid;
+    position: relative;
+    padding-top: 115px;
+    height: calc(100vh - 50px - 144px);
+
+    @media (max-width: $hd) {
+        padding-top: 55px;
+        height: calc(100vh - 50px - 72px);
+    }
+
+
+    &:before {
+        @include  bgImg("/img/img/img_headline-bg.png");
+        background-size: cover;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: calc(-1*(50px + 144px));
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        @media (max-width: $hd) {
+            top: calc(-1*(50px + 72px));
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        color: $color-white;
+    }
+
+    &__desc {
+        margin-bottom: $grid-unit*10;
+    }
+
+    &__img {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        position: absolute;
+        z-index: 1;
+        right: 10px;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        &:after {
+            @include  bgImg("/img/img/img_headline-cow-shadow.png");
+            content: "";
+            position: absolute;
+            z-index: 2;
+            bottom: -21%;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background-position: right;
+        }
+    }
+
+    &__img--wrapper {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        max-height: 1045px;
+        text-align: right;
+        padding-right: 9%;
+
+        img {
+            height: 100%;
+        }
+
+        &:before {
+            @include  bgImg("/img/img/img_headline-sparkles-back.png");
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 20%;
+            right: 5%;
+            width: 75%;
+            height: 100%;
+            background-position: top right;
+        }
+
+        &:after {
+            @include  bgImg("/img/img/img_headline-sparkles-front.png");
+            content: "";
+            position: absolute;
+            z-index: 2;
+            bottom: 12%;
+            left: -4%;
+            width: 75%;
+            height: 100%;
+            background-position: bottom left;
+        }
+    }
+
+    &--wrapper {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+

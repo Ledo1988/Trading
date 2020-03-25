@@ -6,25 +6,29 @@
 
 @mixin container {
     width: 100%;
-    padding: 0 $grid-unit*2;
+    padding: 0 $grid-unit*4;
     margin-right: auto;
     margin-left: auto;
-    max-width: 100%;
+    max-width: 1728px;
 
-    @media (min-width: $xl) {
-        max-width: 1210px;
+    @media (max-width: $hd) {
+        max-width: 1472px;
+    }
+
+    @media (max-width: $xl) {
+        max-width: 100%;
     }
 }
 
 @mixin row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -$grid-unit*2;
-    margin-left: -$grid-unit*2;
+    margin-right: -$grid-unit*4;
+    margin-left: -$grid-unit*4;
 }
 
 @mixin col {
-    padding: 0 $grid-unit*2;
+    padding: 0 $grid-unit*4;
 }
 
 @mixin triangle($direction, $sizeH, $sizeV, $color){
@@ -130,6 +134,12 @@
         height: $height;
     }
     background-image: url("/local/templates/main/images/vector/#{$name}.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin bgImg($path) {
+    background-image: url($path);
     background-repeat: no-repeat;
     background-size: contain;
 }

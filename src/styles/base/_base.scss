@@ -19,7 +19,7 @@ html {
 
 body {
     font-family: $font-primary;
-    font-size: 14px;
+    font-size: 24px;
     line-height: 1;
     color: $color-primary;
     height: 100%;
@@ -28,6 +28,10 @@ body {
     text-rendering: optimizeSpeed;
     margin: 0;
     overflow-x: hidden;
+
+    @media (max-width: $hd) {
+        font-size: 20px;
+    }
 }
 
 img {
