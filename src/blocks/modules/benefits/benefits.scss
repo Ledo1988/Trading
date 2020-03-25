@@ -1,0 +1,17 @@
+.benefits {
+    @include container-fluid;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 72px;
+    }
+
+    &--wrapper {
+        @include container;
+        padding-top: 114px;
+
+        @media (max-width: $hd) {
+            padding-top: 72px;
+        }
+    }
+}

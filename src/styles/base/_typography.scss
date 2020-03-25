@@ -5,11 +5,44 @@ h1, .h1 {
     line-height: 115%;
     margin-bottom: $grid-unit*8;
     margin-top: 0;
+    letter-spacing: -3px;
     text-transform: uppercase;
+  color: $color-bunker;
 
     @media (max-width: $hd) {
         font-size: 68px;
     }
+}
+
+h2, .h2 {
+    font-family: $font-secondary;
+    font-size: 82px;
+    font-weight: 300;
+    line-height: 115%;
+    margin-bottom: $grid-unit*8;
+    margin-top: 0;
+    letter-spacing: -3px;
+  color: $color-bunker;
+
+
+  @media (max-width: $hd) {
+        font-size: 68px;
+    }
+}
+
+.slogan {
+    font-weight: 600;
+    font-size: 28px;
+    color: $color-mulberry;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    opacity: 0.5;
+
+  @media (max-width: $hd) {
+    margin-bottom: 34px;
+  }
+
 }
 
 ul {
@@ -21,6 +54,7 @@ ul {
 p {
     margin: 0;
     margin-bottom: $grid-unit;
+  line-height: 130%;
 
     &:last-of-type {
         margin-bottom: 0;

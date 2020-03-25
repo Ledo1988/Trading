@@ -1,0 +1,43 @@
+.offer {
+    @include container-fluid;
+    margin-bottom: 70px;
+
+    @media (max-width: $hd) {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        flex-shrink: 0;
+        max-width: 45%;
+    }
+
+    &__title {
+        margin-bottom: 100px;
+
+        @media (max-width: $hd) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 100px;
+
+        @media (max-width: $hd) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__img {
+        flex-grow: 1;
+        flex-shrink: 0;
+        text-align: center;
+    }
+
+
+    &--wrapper {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
