@@ -43,11 +43,11 @@ input[type='checkbox'] {
 input,
 textarea {
     font: 14px $font-primary;
-    color: $color-black;
+    color: $color-primary;
 
     &::placeholder {
         font: 14px $font-primary;
-        color: $color-mineShaft;
+        color: $color-black;
     }
 }
 
@@ -68,13 +68,13 @@ input {
     border: 1px solid $color-primary;
     border-radius: 3px;
     font-size: 16px;
-    color: $color-secondary;
-    background: $color-primary;
+    color: $color-primary;
+    background: $color-white;
     transition: $transition;
     cursor: auto;
 
     &::placeholder {
-        color: $color-silverChalice;
+        color: $color-primary;
     }
 
     &:active, &:focus, &:hover {
@@ -101,21 +101,13 @@ input {
         font-size: 14px;
         line-height: $grid-unit*3;
         cursor: auto;
-
-        &.input__label--required {
-
-            &:after {
-                content: ' *';
-                color: $color-error;
-            }
-        }
     }
 }
 
 textarea {
     display: block;
     padding: 10px $grid-unit*2 10px $grid-unit*2;
-    border: 1px solid $color-mineShaft;
+    border: 1px solid $color-primary;
     border-radius: 2px;
     width: 100%;
     height: 100px;
@@ -126,7 +118,7 @@ textarea {
     transition: $transition;
 
     &::placeholder {
-        color: $color-mineShaft;
+        color: $color-primary;
     }
 }
 
@@ -140,210 +132,5 @@ textarea {
         font-weight: 700;
         font-size: 14px;
         line-height: $grid-unit*3;
-    }
-}
-
-
-.close-link {
-    position: absolute;
-    display: block;
-    width: $grid-unit*2;
-    height: $grid-unit*2;
-    font-size: 0;
-    transition: $transition;
-    cursor: pointer;
-
-    svg.icon {
-        fill: $color-black;
-    }
-}
-
-
-.input-animated {
-    position: relative;
-    margin-bottom: $grid-unit*3;
-
-    &.not-empty {
-
-        .input-animated__item {
-            padding: 20px 14px 10px 8px;
-            border-color: $color-secondary;
-        }
-
-        .input-animated__label {
-            top: 6px;
-            font-size: 10px;
-        }
-
-        .input-animated__empty {
-            opacity: 1;
-            pointer-events: auto;
-        }
-    }
-
-    &.error {
-
-        .input-animated__item {
-            border-color: $color-error;
-            color: $color-error;
-        }
-
-        .input-animated__label {
-            color: $color-error;
-        }
-
-        .input-animated__error {
-            opacity: 1;
-            pointer-events: auto;
-            z-index: 3;
-        }
-
-        .input-animated__empty {
-            svg.icon {
-                fill: $color-error;
-            }
-        }
-    }
-
-    &__item {
-        padding: $grid-unit*3 14px $grid-unit*3 8px;
-        width: 100%;
-        min-height: 50px;
-        transition: $transition;
-    }
-
-    &__label {
-        position: absolute;
-        top: 18px;
-        left: 8px;
-        margin: 0;
-        width: auto;
-        font-size: 16px;
-        color: $color-silverChalice;
-        transition: $transition;
-        cursor: text;
-        user-select: none;
-        z-index: 2;
-    }
-
-    &__empty {
-        position: absolute;
-        top: 15px;
-        right: 10px;
-        display: block;
-        width: $grid-unit*4;
-        height: $grid-unit*4;
-        padding: $grid-unit;
-        opacity: 0;
-        transition: $transition;
-        pointer-events: none;
-
-        svg.icon {
-            fill: $color-secondary;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    &__error {
-        display: block;
-        position: absolute;
-        top: calc(100% + 10px);
-        left: calc(100%/3*0.5);
-        padding: 12px;
-        border-radius: 3px;
-        width: calc(100%/3*2);
-        min-height: 36px;
-        font-size: 16px;
-        color: $color-white;
-        line-height: 1;
-        background-color: $color-error;
-        opacity: 0;
-        transition: $transition;
-        pointer-events: none;
-        z-index: -1;
-
-        &::before {
-            position: absolute;
-            top: -10px;
-            left: calc((100% - 20px)/2);
-            @include triangle(top, 10px, 10px, $color-error);
-        }
-    }
-}
-
-.checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    &__input {
-        position: absolute;
-        width: 0;
-        height: 0;
-        opacity: 0;
-        pointer-events: none;
-        
-        @media (min-width: $md) {
-            &:hover {
-                ~ label::before {
-                    background-color: rgba(68, 136, 187, 0.5);
-                }
-            } 
-        }
-
-        &:checked {
-            ~ label::before {
-                background-color: $color-secondary;
-            }
-
-            ~ label::after {
-                opacity: 1;
-            }
-        }
-    }
-
-    &__label {
-        position: relative;
-        cursor: pointer;
-        user-select: none;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        font-size: 16px;
-        color: $color-silverChalice;
-
-        &:before {
-            content: '';
-            width: 18px;
-            height: 18px;
-            box-sizing: border-box;
-            border: 1px solid transparent;
-            border-radius: 3px;
-            margin-right: 8px;
-            background: $color-primary;
-            transition: $transition;
-            flex-shrink: 0;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 3px;
-            width: 5px;
-            height: 10px;
-            border: solid $color-white;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-            transition: $transition;
-            opacity: 0;
-        }
-
-
-    }
-
-    &__title {
-
     }
 }

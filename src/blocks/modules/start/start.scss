@@ -1,16 +1,38 @@
 .start {
     @include container-fluid;
-    margin-bottom: 120px;
+    margin-bottom: 150px;
 
     @media (max-width: $hd) {
-        margin-bottom: 70px;
+        margin-bottom: 100px;
     }
 
     .swiper-slide__img {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        height: 100%;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    .swiper-pagination-fraction {
+        z-index: -1;
+        top: 10px;
+        bottom: auto;
+        left: 533px;
+        width: auto;
+        font-family: $font-secondary;
+        font-weight: 700;
+        font-size: 100px;
+        color: $color-affair;
+        text-align: right;
+
+        @media (max-width: $hd) {
+            left: 403px;
+        }
     }
 
     &__text {
@@ -44,16 +66,27 @@
 
     &__slider--wrapper {
         position: relative;
-        height: 570px;
+        height: 740px;
+
+        @media (max-width: $hd) {
+            height: 570px;
+        }
     }
 
     &__slider-content {
         position: absolute;
-        top: 40px;
-        left: 200px;
-        width: 210px;
-        height: calc(100% - 80px);
+        top: 55px;
+        left: 260px;
+        width: 260px;
+        height: calc(100% - 95px);
         background-color: $color-white;
+
+        @media (max-width: $hd) {
+            top: 40px;
+            left: 200px;
+            width: 210px;
+            height: calc(100% - 80px);
+        }
     }
 
     &--wrapper {
