@@ -42,8 +42,24 @@ h2, .h2 {
 
 
   @media (max-width: $hd) {
-        font-size: 68px;
-    }
+    font-size: 68px;
+  }
+
+  @media (max-width: $xl - 1) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 54px;
+  }
+
+  @media (max-width: $md) {
+    font-size: 40px;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 30px;
+  }
 }
 
 .slogan {
@@ -57,6 +73,16 @@ h2, .h2 {
 
   @media (max-width: $hd) {
     margin-bottom: 34px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 24px;
+    margin-bottom: 24px;
   }
 
 }

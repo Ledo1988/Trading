@@ -11,6 +11,15 @@
     &__text {
         flex-shrink: 0;
         max-width: 35%;
+
+        @media (max-width: $tablet) {
+            max-width: 55%;
+        }
+
+        @media (max-width: $md) {
+            max-width: 100%;
+            margin-bottom: 24px;
+        }
     }
 
     &__title {
@@ -19,6 +28,14 @@
         @media (max-width: $hd) {
             margin-bottom: 50px;
         }
+
+        @media (max-width: $tablet) {
+            margin-bottom: 38px;
+        }
+
+        @media (max-width: $md) {
+            margin-bottom: 32px;
+        }
     }
 
     &__desc {
@@ -26,6 +43,10 @@
 
         @media (max-width: $hd) {
             margin-bottom: 65px;
+        }
+
+        @media (max-width: $tablet) {
+            margin-bottom: 48px;
         }
     }
 
@@ -37,6 +58,15 @@
         height: 100%;
         text-align: center;
 
+        @media (max-width: $tablet) {
+            width: 45%;
+        }
+
+        @media (max-width: $md) {
+            position: relative;
+            width: 100%;
+        }
+
         &:after {
             @include  bgImg("/img/ico/ico_offer-bottom-after.png");
             content: "";
@@ -45,6 +75,10 @@
             bottom: -70px;
             width: 100%;
             height: 29px;
+
+            @media (max-width: $md) {
+                display: none;
+            }
         }
     }
 
@@ -52,10 +86,6 @@
         display: inline-block;
         position: relative;
         height: 100%;
-
-        img {
-            height: 100%;
-        }
 
         &:after {
             @include  bgImg("/img/img/img_offer-cow.png");
@@ -67,6 +97,16 @@
             height: 80%;
             background-position: right;
         }
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    &__btn {
+        @media (max-width: $sm) {
+            width: 100%;
+        }
     }
 
 
@@ -76,6 +116,10 @@
         justify-content: space-between;
         position: relative;
         height: 100%;
+
+        @media (max-width: $md) {
+            display: block;
+        }
 
 
         &:before {
