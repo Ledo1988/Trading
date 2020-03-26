@@ -2120,6 +2120,10 @@ textarea::placeholder {
     font-size: 85px;
   }
 
+  .start__desc {
+    margin-bottom: 48px;
+  }
+
   .start__slider--wrapper {
     height: 470px;
   }

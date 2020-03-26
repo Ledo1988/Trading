@@ -88,6 +88,10 @@
         @media (max-width: $hd) {
             margin-bottom: 65px;
         }
+
+        @media (max-width: $tablet) {
+            margin-bottom: 48px;
+        }
     }
 
     &__slider-img {
