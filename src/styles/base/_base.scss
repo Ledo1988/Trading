@@ -32,6 +32,10 @@ body {
     @media (max-width: $hd) {
         font-size: 20px;
     }
+
+    @media (max-width: $tablet) {
+        font-size: 18px;
+    }
 }
 
 img {

@@ -17,6 +17,14 @@
 
     @media (max-width: $xl) {
         max-width: 100%;
+        padding-left: $grid-unit*8;
+        padding-right: $grid-unit*8;
+    }
+
+    @media (max-width: $md) {
+        max-width: 100%;
+        padding-left: $grid-unit*6;
+        padding-right: $grid-unit*6;
     }
 }
 
@@ -25,6 +33,16 @@
     flex-wrap: wrap;
     margin-right: -$grid-unit*4;
     margin-left: -$grid-unit*4;
+
+    @media (max-width: $xl) {
+        margin-right: -$grid-unit*8;
+        margin-left: -$grid-unit*8;
+    }
+
+    @media (max-width: $md) {
+        margin-right: -$grid-unit*6;
+        margin-left: -$grid-unit*6;
+    }
 }
 
 @mixin col {

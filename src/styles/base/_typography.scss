@@ -12,6 +12,22 @@ h1, .h1 {
     @media (max-width: $hd) {
         font-size: 68px;
     }
+
+  @media (max-width: $xl - 1) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 54px;
+  }
+
+  @media (max-width: $md) {
+    font-size: 40px;
+  }
+
+  @media (max-width: $sm) {
+    font-size: 30px;
+  }
 }
 
 h2, .h2 {
