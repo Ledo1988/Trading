@@ -6,12 +6,20 @@
         margin-bottom: 120px;
     }
 
+    @media (max-width: $tablet) {
+        margin-bottom: 60px;
+    }
+
     &__title {
         text-align: center;
         margin-bottom: 100px;
 
         @media (max-width: $hd) {
             margin-bottom: 60px;
+        }
+
+        @media (max-width: $tablet) {
+            margin-bottom: 32px;
         }
     }
 
@@ -36,6 +44,10 @@
                 width: 250px;
                 height: 100px;
             }
+
+            @media (max-width: $tablet) {
+                display: none;
+            }
         }
 
         &:before {
@@ -51,6 +63,10 @@
             @media (max-width: $hd) {
                 right: calc(100% + 10px);
             }
+
+            @media (max-width: $tablet) {
+                display: none;
+            }
         }
     }
 
@@ -64,8 +80,22 @@
             margin: 50px auto;
         }
 
+        @media (max-width: $md) {
+            flex-basis: 40%;
+            margin: 32px auto;
+        }
+
+        @media (max-width: $sm) {
+            flex-basis: 100%;
+            margin: 24px auto;
+        }
+
         &:nth-of-type(3n - 1) {
             flex-grow: 1;
+
+            @media (max-width: $md) {
+                flex-grow: 0;
+            }
 
             &:last-of-type {
                 flex-grow: 0;
@@ -92,6 +122,10 @@
             padding-top: 72px;
         }
 
+        @media (max-width: $sm) {
+            padding-top: 0;
+        }
+
         &:before {
             --width: 606px;
             @include  bgImg("/img/ico/ico_benefit-top.png");
@@ -105,6 +139,10 @@
             @media (max-width: $hd) {
                 --width: 410px;
                 left: calc(var(--width)/-8);
+            }
+
+            @media (max-width: $sm) {
+                display: none;
             }
         }
 
@@ -121,6 +159,10 @@
             @media (max-width: $hd) {
                 --width: 410px;
                 left: calc(var(--width)/-8);
+            }
+
+            @media (max-width: $sm) {
+                display: none;
             }
         }
     }

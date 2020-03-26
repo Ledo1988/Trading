@@ -6,6 +6,10 @@
         margin-bottom: 100px;
     }
 
+    @media (max-width: $tablet) {
+        margin-bottom: 60px;
+    }
+
     .swiper-slide__img {
         display: flex;
         flex-direction: column;
@@ -33,11 +37,37 @@
         @media (max-width: $hd) {
             left: 403px;
         }
+
+        @media (max-width: $tablet) {
+            top: 5px;
+            left: 328px;
+            font-size: 85px;
+        }
+
+        @media (max-width: $md) {
+            left: 415px;
+        }
+
+        @media (max-width: $sm) {
+            left: calc(50% + 37px);
+            font-size: 50px;
+        }
+
+        @media (max-width: 400px) {
+            left: calc(50% + 28px);
+            font-size: 40px;
+        }
     }
 
     &__text {
         flex-shrink: 0;
         max-width: 35%;
+
+        @media (max-width: $md) {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 48px;
+        }
     }
 
     &__title {
@@ -45,6 +75,10 @@
 
         @media (max-width: $hd) {
             margin-bottom: 50px;
+        }
+
+        @media (max-width: $md) {
+            margin-bottom: 32px;
         }
     }
 
@@ -60,7 +94,7 @@
         height: 100%;
 
         img {
-            height: 100%;
+            max-height: 100%;
         }
     }
 
@@ -70,6 +104,24 @@
 
         @media (max-width: $hd) {
             height: 570px;
+        }
+
+        @media (max-width: $tablet) {
+            height: 470px;
+        }
+
+        @media (max-width: $md) {
+            text-align: center;
+        }
+
+        @media (max-width: $sm) {
+            width: 352px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 400px) {
+            width: 272px;
         }
     }
 
@@ -87,6 +139,29 @@
             width: 210px;
             height: calc(100% - 80px);
         }
+
+        @media (max-width: $tablet) {
+            left: 165px;
+            width: 175px;
+        }
+
+        @media (max-width: $md) {
+            left: calc(50% - 112px);
+        }
+
+        @media (max-width: $sm) {
+            top: 25px;
+            left: calc(50% - 70px);
+            width: 108px;
+            height: calc(100% - 50px);
+        }
+
+        @media (max-width: 400px) {
+            top: 20px;
+            left: calc(50% - 55px);
+            width: 85px;
+            height: calc(100% - 40px);
+        }
     }
 
     &--wrapper {
@@ -96,5 +171,9 @@
         justify-content: space-between;
         position: relative;
         height: 100%;
+
+        @media (max-width: $md) {
+            display: block;
+        }
     }
 }

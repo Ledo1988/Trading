@@ -8,6 +8,10 @@
         padding-bottom: 80px;
     }
 
+    @media (max-width: $sm) {
+        padding-bottom: 30px;
+    }
+
     &__text {
         flex-shrink: 0;
         max-width: 35%;
@@ -76,7 +80,7 @@
             width: 100%;
             height: 29px;
 
-            @media (max-width: $md) {
+            @media (max-width: $sm) {
                 display: none;
             }
         }
@@ -136,6 +140,10 @@
                 width: 250px;
                 height: 100px;
             }
+
+            @media (max-width: $tablet) {
+                display: none;
+            }
         }
 
         &:after {
@@ -147,6 +155,10 @@
             width: 191px;
             height: 71px;
             background-position: top left;
+
+            @media (max-width: $tablet) {
+                display: none;
+            }
         }
     }
 }
