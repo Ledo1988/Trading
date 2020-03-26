@@ -986,35 +986,35 @@ button.swiper-pagination-bullet {
   font-family: "OpenSans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  src: url("/fonts/OpenSans-Regular.woff2") format("woff2"), url("/fonts/OpenSans-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  src: url("/fonts/OpenSans-SemiBold.woff2") format("woff2"), url("/fonts/OpenSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  src: url("/fonts/OpenSans-Bold.woff2") format("woff2"), url("/fonts/OpenSans-Bold.woff") format("woff");
 }
 
 @font-face {
   font-family: "GothamPro";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/GothamPro-Light.woff2") format("woff2"), url("../fonts/GothamPro-Light.woff") format("woff");
+  src: url("/fonts/GothamPro-Light.woff2") format("woff2"), url("/fonts/GothamPro-Light.woff") format("woff");
 }
 
 @font-face {
   font-family: "GothamPro";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/GothamPro-Bold.woff2") format("woff2"), url("../fonts/GothamPro-Bold.woff") format("woff");
+  src: url("/fonts/GothamPro-Bold.woff2") format("woff2"), url("/fonts/GothamPro-Bold.woff") format("woff");
 }
 
 * {
@@ -1377,7 +1377,7 @@ textarea::placeholder {
 }
 
 .headline:before {
-  background-image: url("../img/img/img_headline-bg.png");
+  background-image: url("/img/img/img_headline-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-size: cover;
@@ -1426,7 +1426,7 @@ textarea::placeholder {
 }
 
 .headline__img:after {
-  background-image: url("../img/img/img_headline-cow-shadow.png");
+  background-image: url("/img/img/img_headline-cow-shadow.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1455,7 +1455,7 @@ textarea::placeholder {
 }
 
 .headline__img--wrapper:before {
-  background-image: url("../img/img/img_headline-sparkles-back.png");
+  background-image: url("/img/img/img_headline-sparkles-back.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1469,7 +1469,7 @@ textarea::placeholder {
 }
 
 .headline__img--wrapper:after {
-  background-image: url("../img/img/img_headline-sparkles-front.png");
+  background-image: url("/img/img/img_headline-sparkles-front.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1525,7 +1525,7 @@ textarea::placeholder {
 }
 
 .offer__img:after {
-  background-image: url("../img/ico/ico_offer-bottom-after.png");
+  background-image: url("/img/ico/ico_offer-bottom-after.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1543,7 +1543,7 @@ textarea::placeholder {
 }
 
 .offer__img--wrapper:after {
-  background-image: url("../img/img/img_offer-cow.png");
+  background-image: url("/img/img/img_offer-cow.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1572,7 +1572,7 @@ textarea::placeholder {
 }
 
 .offer--wrapper:before {
-  background-image: url("../img/ico/ico_offer-top-before.png");
+  background-image: url("/img/ico/ico_offer-top-before.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1584,7 +1584,7 @@ textarea::placeholder {
 }
 
 .offer--wrapper:after {
-  background-image: url("../img/ico/ico_offer-top-before.png");
+  background-image: url("/img/ico/ico_offer-top-before.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1617,7 +1617,7 @@ textarea::placeholder {
 }
 
 .benefits__list:after {
-  background-image: url("../img/ico/ico_offer-top-before.png");
+  background-image: url("/img/ico/ico_offer-top-before.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1629,7 +1629,7 @@ textarea::placeholder {
 }
 
 .benefits__list:before {
-  background-image: url("../img/ico/ico_offer-top-before.png");
+  background-image: url("/img/ico/ico_offer-top-before.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1678,7 +1678,7 @@ textarea::placeholder {
 
 .benefits--wrapper:before {
   --width: 606px;
-  background-image: url("../img/ico/ico_benefit-top.png");
+  background-image: url("/img/ico/ico_benefit-top.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -1691,7 +1691,7 @@ textarea::placeholder {
 
 .benefits--wrapper:after {
   --width: 606px;
-  background-image: url("../img/ico/ico_benefit-bottom.png");
+  background-image: url("/img/ico/ico_benefit-bottom.png");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -2263,6 +2263,18 @@ textarea::placeholder {
   }
 }
 
+@media (max-width: 768px) and (max-height: 500px) {
+  .headline {
+    height: 100%;
+    margin-bottom: 50px;
+  }
+
+  .headline:before {
+    top: calc(-1*(50px + 72px));
+    height: calc(100% + 50px + 72px);
+  }
+}
+
 @media (max-width: 768px) and (min-height: 769px) {
   .headline__text {
     max-height: 65%;
@@ -2290,8 +2302,8 @@ textarea::placeholder {
   }
 
   .headline {
-    margin-bottom: 50px;
-    height: calc(100vh - 50px - 32px);
+    height: calc(100vh - 50px - 32px - 56px);
+    margin-bottom: 106px;
   }
 
   .headline:before {
@@ -2363,6 +2375,18 @@ textarea::placeholder {
     left: calc(50% - 70px);
     width: 108px;
     height: calc(100% - 50px);
+  }
+}
+
+@media (max-width: 576px) and (max-height: 500px) {
+  .headline {
+    height: 100%;
+    margin-bottom: 50px;
+  }
+
+  .headline:before {
+    top: calc(-1*(50px + 32px));
+    height: calc(100% + 50px + 32px);
   }
 }
 
