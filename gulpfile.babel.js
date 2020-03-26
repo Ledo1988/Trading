@@ -34,7 +34,6 @@ const requireDir = require("require-dir"),
         images: {
             src: [
                 "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
-                "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
             ],
             dist: "./docs/img/",
             watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg}"
@@ -42,12 +41,10 @@ const requireDir = require("require-dir"),
         webp: {
             src: [
                 "./src/img/**/*.{jpg,jpeg,png,tiff}",
-                "!./src/img/favicon/*.{jpg,jpeg,png,gif}"
             ],
             dist: "./docs/img/",
             watch: [
                 "./src/img/**/*.{jpg,jpeg,png,tiff}",
-                "!./src/img/favicon.{jpg,jpeg,png,gif}"
             ]
         },
         sprites: {
@@ -60,10 +57,6 @@ const requireDir = require("require-dir"),
             dist: "./docs/fonts/",
             watch: "./src/fonts/**/*.{woff,woff2}"
         },
-        favicons: {
-            src: "./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}",
-            dist: "./docs/img/favicons/",
-        },
         gzip: {
             src: "./src/.htaccess",
             dist: "./docs/"
@@ -75,10 +68,10 @@ requireDir("./gulp-tasks/");
 export { paths };
 
 export const development = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]),
+    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.series(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
+    gulp.series(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "gzip"]));
 
 export default development;
